@@ -2,6 +2,13 @@ a:hover{
     color: #000;
 }
 
+a>h1 {
+    display: inline;
+}
+a:hover>h1 {
+    color: white;
+}
+
 body, html {
     background-color: #333;
     font-family: 'Open Sans', sans-serif;
@@ -79,6 +86,14 @@ p.main {
     padding-bottom: 2%;
 }
 
+.resume-left {
+    padding-right: 5%;
+    font-weight: bold;
+}
+
+.resume-right {
+    padding-right:5%;
+}
 /** Portfolio.html **/
 .my-work {
     font-size: 1.25em;
