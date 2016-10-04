@@ -64,64 +64,77 @@
     </form>
 </div>
 
-<form class="quiz" method="POST" action="http://requestb.in/1irqoya1">
-    <h2>Multiple Choice Test</h2>
-    <p>Phone preference?</p>
-    <label>
-        <input type="radio" name="phone" value="iOS">
-        iOS
-    </label>
-    <label>
-        <input type="radio" name="phone" value="android">
-        Android
-    </label>
-    <label>
-        <input type="radio" name="phone" value="blackberry">
-        Blackberry
-    </label>
+<div class="container">
+    <form class="quiz" method="POST" action="http://requestb.in/1irqoya1">
+        <h2>Multiple Choice Test</h2>
+        <h3>Phone preference?</h3>
+        <div class="form-group">
+            <label>
+                <input type="radio" name="phone" value="iOS">
+                iOS
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="radio" name="phone" value="android">
+                Android
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="radio" name="phone" value="blackberry">
+                Blackberry
+            </label>
+        </div>
 
-    <p>City Codeup is in?</p>
-    <label>
-        <input type="radio" name="city" value="houston">
-        Houston
-    </label>
-    <label>
-        <input type="radio" name="city" value="san antonio">
-        San Antonio
-    </label>
-    <label>
-        <input type="radio" name="city" value="austin">
-        Austin
-    </label>
+        <h3>City Codeup is in?</h3>
+        <div class="form-group">
+            <label>
+                <input type="radio" name="city" value="houston">
+                Houston
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="radio" name="city" value="san antonio">
+                San Antonio
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="radio" name="city" value="austin">
+                Austin
+            </label>
+        </div>
 
-    <p>What Operating systems used?</p>
-    <label><input type="checkbox" id="os1" name="os[]" value="linux">Linux </label>
-    <label><input type="checkbox" id="os2" name="os[]" value="macOs">Mac OS </label>
-    <label><input type="checkbox" id="os3" name="os[]" value="windows">Windows </label>
+        <h3>What Operating systems used?</h3>
+        <div class="form-group">
+            <label><input type="checkbox" id="os1" name="os[]" value="linux">Linux </label>
+        </div>
+        <div class="form-group">
+            <label><input type="checkbox" id="os2" name="os[]" value="macOs">Mac OS </label>
+        </div>
+        <div class="form-group">
+            <label><input type="checkbox" id="os3" name="os[]" value="windows">Windows </label>
+        </div>
 
-    <p>
-        <label for="instrument">Can you play some of these instruments?</label>
-        <select id="instrument" name="instrument[]" multiple>
-            <option value="0" selected>Guitar</option>
-            <option value="1">Bass</option>
-            <option value="2" selected>Drums</option>
-            <option value="3">Wind instrument</option>
-            <option value="4">Brass instrument</option>
-        </select>
-    </p>
-    <div>
-        <input type="submit">
-    </div>
-</form>
+        <div class="form-group">
+            <label for="instrument">Can you play some of these instruments?</label>
+            <select id="instrument" name="instrument[]" multiple class="form-control">
+                <option value="0" selected>Guitar</option>
+                <option value="1">Bass</option>
+                <option value="2" selected>Drums</option>
+                <option value="3">Wind instrument</option>
+                <option value="4">Brass instrument</option>
+            </select>
+        </div>
 
-<form class="less_visible" method="post" action="http://requestb.in/1irqoya1">
-    <h2 class="fancy-header">Select Testing</h2>
-    <label for="better_than">You think you're better than me?</label>
-    <select id="better_than" name="better_than">
-        <option value="0">Not really</option>
-        <option value="1" selected>I really do</option>
-    </select>
-    <button>Send it up</button>
-</form>
+
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+</div>
+
 </body>
 </html>
