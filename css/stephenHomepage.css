@@ -1,0 +1,144 @@
+body, html{
+    background-image: url("../img/concrete_seamless.png");
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+}
+
+nav#linkBar {
+    margin-left:5%;
+}
+
+nav>h1 {
+    display: inline;
+    font-size: medium;
+}
+
+#linkBar>a {
+    padding-left: 10px;
+    padding-right: 10px;
+    clear: right;
+}
+
+#topBanner {
+    background-image: url("../img/root.png");
+    background-size: 600px, 100px;
+    width: 90%;
+    height: 20em;
+    margin-left:5%;
+    margin-right:5%;
+    overflow: hidden;
+}
+
+#topBanner>h1 {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    position: relative;
+    text-align: center;
+    top:15%;
+    font-size: 30pt;
+}
+
+#topBanner>form {
+    position: relative;
+    text-align: center;
+    top:25%;
+    width:100%;
+    margin: 0 auto;
+}
+
+.join{
+    padding:10px;
+    margin-left: 10px;
+}
+div.mainText {
+    width:60%;
+    margin-left: 5%;
+    float: left;
+}
+
+div.rightColumn {
+    width: 25%;
+    float: left;
+    margin-left: 5%;
+}
+
+div#jimmy {
+    margin-left: 5%;
+    margin-right:5%;
+    margin-bottom: 2%;
+    border: 1px solid black;
+    width: 90%;
+    height: 5em;
+    clear: both;
+    position: relative;
+
+}
+
+#jimmy>div {
+    position: absolute;
+    left:10%;
+    top:40%;
+}
+
+#jimmy>small {
+    position: absolute;
+    left:15%;
+    top: 80%;
+}
+
+@media only screen and (max-width: 750px) {
+
+    #linkBar>a {
+        display: block;
+        margin-bottom:1em;
+    }
+
+    #linkBar>h1 {
+        font-size: 20pt;
+        margin-bottom: 30px;
+    }
+
+    #topBanner>h1 {
+        font-size: 18pt;
+    }
+
+    div.mainText {
+        width:100%;
+    }
+    div.rightColumn {
+        clear: left;
+        width:100%;
+    }
+
+    #jimmy>div {
+        font-size: x-small;
+        left:5%;
+    }
+
+    #jimmy>small {
+        font-size: xx-small;
+        left:5%;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    #topBanner>h1 {
+        font-size: 24pt;
+    }
+
+    #topBanner>form {
+        width:100%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #topBanner>h1 {
+        font-size: 28pt;
+    }
+}
+
+
+
