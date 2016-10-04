@@ -1,113 +1,127 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>My First HTML Form</title>
-        <link rel="stylesheet" href="css/site.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    </head>
-    <body>
-        <div class="container">
-        <form method="POST" action="http://requestb.in/1irqoya1">
-            <h2>User Login</h2>
-            <p>
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text" required autofocus>
-            </p>
-            <p>
-                <label for="password">Password</label>
-                <input id="password" name="password" type="password" required placeholder="hunter12">
-            </p>
-            <p>
-                <input type="submit">
-            </p>
-        </form>
-        </div>
-
-        <form method="POST" action="http://requestb.in/1irqoya1">
-
-            <h2>Compose an Email</h2>
+<head>
+    <meta charset="UTF-8">
+    <title>My First HTML Form</title>
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <form method="POST" action="http://requestb.in/1irqoya1">
+        <h2>User Login</h2>
+        <p>
+            <label for="username">Username</label>
+            <input class="form-control" id="username" name="username" type="text" required autofocus>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input class="form-control" id="password" name="password" type="password" required placeholder="hunter12">
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+</div>
+<div class="container">
+    <h2>Compose an Email</h2>
+    <form method="POST" action="http://requestb.in/1irqoya1" class="form-horizontal">
+        <div class="form-group">
             <p>
                 <label for="to">To:</label>
                 <input type="text" id="to" name="to" value="jdavila">
             </p>
+        </div>
+        <div class="form-group">
             <p>
                 <label for="from">From:</label>
                 <input type="text" id="from" name="from" placeholder="youKnowWho">
             </p>
+        </div>
+        <div class="form-group">
             <p>
                 <label for="subject">Subject:</label>
                 <input type="text" id="subject" name="subject" placeholder="youKnowWhy">
 
             </p>
+        </div>
+        <div class="form-group">
             <p>
                 <label for="email_body">Body:</label>
                 <textarea id="email_body" name="email_body" placeholder="Content Here" rows="5" cols="40"></textarea>
             </p>
+        </div>
+        <div class="form-group">
             <label for="save_copy">Would you like to save a copy to your sent folder?</label>
             <input type="checkbox" id="save_copy" name="save_copy" value="yes" checked>
 
+        </div>
+        <div class="form-group">
             <input type="submit" value="Send">
-        </form>
 
-        <form class="quiz" method="POST" action="http://requestb.in/1irqoya1">
-            <h2>Multiple Choice Test</h2>
-            <p>Phone preference?</p>
-            <label>
-                <input type="radio" name="phone" value="iOS">
-                iOS
-            </label>
-            <label>
-                <input type="radio" name="phone" value="android">
-                Android
-            </label>
-            <label>
-                <input type="radio" name="phone" value="blackberry">
-                Blackberry
-            </label>
+        </div>
+    </form>
+</div>
 
-            <p>City Codeup is in?</p>
-            <label>
-                <input type="radio" name="city" value="houston">
-                Houston
-            </label>
-            <label>
-                <input type="radio" name="city" value="san antonio">
-                San Antonio
-            </label>
-            <label>
-                <input type="radio" name="city" value="austin">
-                Austin
-            </label>
+<form class="quiz" method="POST" action="http://requestb.in/1irqoya1">
+    <h2>Multiple Choice Test</h2>
+    <p>Phone preference?</p>
+    <label>
+        <input type="radio" name="phone" value="iOS">
+        iOS
+    </label>
+    <label>
+        <input type="radio" name="phone" value="android">
+        Android
+    </label>
+    <label>
+        <input type="radio" name="phone" value="blackberry">
+        Blackberry
+    </label>
 
-            <p>What Operating systems used?</p>
-            <label><input type="checkbox" id="os1" name="os[]" value="linux">Linux </label>
-            <label><input type="checkbox" id="os2" name="os[]" value="macOs">Mac OS </label>
-            <label><input type="checkbox" id="os3" name="os[]" value="windows">Windows </label>
+    <p>City Codeup is in?</p>
+    <label>
+        <input type="radio" name="city" value="houston">
+        Houston
+    </label>
+    <label>
+        <input type="radio" name="city" value="san antonio">
+        San Antonio
+    </label>
+    <label>
+        <input type="radio" name="city" value="austin">
+        Austin
+    </label>
 
-            <p>
-                <label for="instrument">Can you play some of these instruments?</label>
-                <select id="instrument" name="instrument[]" multiple>
-                    <option value="0" selected>Guitar</option>
-                    <option value="1">Bass</option>
-                    <option value="2" selected>Drums</option>
-                    <option value="3">Wind instrument</option>
-                    <option value="4">Brass instrument</option>
-                </select>
-            </p>
-            <div>
-                <input type="submit">
-            </div>
-        </form>
+    <p>What Operating systems used?</p>
+    <label><input type="checkbox" id="os1" name="os[]" value="linux">Linux </label>
+    <label><input type="checkbox" id="os2" name="os[]" value="macOs">Mac OS </label>
+    <label><input type="checkbox" id="os3" name="os[]" value="windows">Windows </label>
 
-        <form class="less_visible" method="post" action="http://requestb.in/1irqoya1">
-            <h2 class="fancy-header">Select Testing</h2>
-            <label for="better_than">You think you're better than me?</label>
-            <select id="better_than" name="better_than">
-                <option value="0">Not really</option>
-                <option value="1" selected>I really do</option>
-            </select>
-            <button>Send it up</button>
-        </form>
-    </body>
+    <p>
+        <label for="instrument">Can you play some of these instruments?</label>
+        <select id="instrument" name="instrument[]" multiple>
+            <option value="0" selected>Guitar</option>
+            <option value="1">Bass</option>
+            <option value="2" selected>Drums</option>
+            <option value="3">Wind instrument</option>
+            <option value="4">Brass instrument</option>
+        </select>
+    </p>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
+<form class="less_visible" method="post" action="http://requestb.in/1irqoya1">
+    <h2 class="fancy-header">Select Testing</h2>
+    <label for="better_than">You think you're better than me?</label>
+    <select id="better_than" name="better_than">
+        <option value="0">Not really</option>
+        <option value="1" selected>I really do</option>
+    </select>
+    <button>Send it up</button>
+</form>
+</body>
 </html>
