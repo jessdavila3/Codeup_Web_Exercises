@@ -22,6 +22,7 @@ body.splash {
 .brand-name {
     font-size: 5em;
     font-family: 'Lora', serif;
+    border:solid 1px black;
 }
 .full {
     background: url(../img/cheetah-pizza.jpg) no-repeat center center fixed;
