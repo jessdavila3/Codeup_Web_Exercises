@@ -1,9 +1,28 @@
-body {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background: none;
+html body {
+    font-family: 'Bitter', serif;
 }
 
+body.splash {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.gray-background {
+    background-color: #333;
+}
+
+.jumbotron-background {
+    background-color: whitesmoke;
+}
+
+.form-background {
+    background-color: white;
+}
+
+.brand-name {
+    font-size: 5em;
+    font-family: 'Lora', serif;
+}
 .full {
     background: url(../img/cheetah-pizza.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -14,8 +33,10 @@ body {
 
 .main {
     background-color: white;
+    opacity: .8;
     width: 80%;
     height: auto;
-    padding:10%;
+    padding:2.5%;
+    color: #000;
 }
 

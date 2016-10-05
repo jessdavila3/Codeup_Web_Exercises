@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pizza.css">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Lora:700" rel="stylesheet">
+</head>
+<body class="gray-background">
+<main class="container form-background">
+    <div class="jumbotron jumbotron-background">
+        <h1 class="text-center">Order here</h1>
+    </div>
+    <div class="container">
+        <form>
+            <h2>Select Your Pizza Size<small><br>Go for the large...</small></h2>
+            <div class="radio form-group">
+                <label>
+                    <input type="radio" name="sm" id="sm" value="sm">
+                    Small
+                </label>
+            </div>
+            <div class="radio form-group">
+                <label>
+                    <input type="radio" name="md" id="md" value="md">
+                    Medium
+                </label>
+            </div>
+            <div class="radio form-group">
+                <label>
+                    <input type="radio" name="lg" id="lg" value="lg" checked>
+                    Large
+                </label>
+            </div>
+            <h2>Toppings?</h2>
+            <div class="checkbox form-group">
+                <label>
+                    <input type="checkbox" value="1">
+                    Pepperoni
+                </label>
+            </div>
+            <div class="checkbox form-group">
+                <label>
+                    <input type="checkbox" value="2">
+                    Sausage
+                </label>
+            </div>
+            <div class="checkbox form-group">
+                <label>
+                    <input type="checkbox" value="3">
+                    Mushrooms
+                </label>
+            </div>
+            <div class="checkbox form-group">
+                <label>
+                    <input type="checkbox" value="4">
+                    Peppers
+                </label>
+            </div>
+            <div class="checkbox form-group">
+                <label>
+                    <input type="checkbox" value="5">
+                    Onion
+                </label>
+            </div>
+            <h2>Sauce & Cheese, Right?</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="checkbox form-group">
+                        <label>
+                            <input type="checkbox" value="1" checked>
+                            Tomato sauce
+                        </label>
+                    </div>
+                    <div class="checkbox form-group">
+                        <label>
+                            <input type="checkbox" value="2">
+                            White sauce
+                        </label>
+                    </div>
+                    <div class="checkbox form-group">
+                        <label>
+                            <input type="checkbox" value="3">
+                            No sauce
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="checkbox form-group">
+                        <label>
+                            <input type="checkbox" value="1" checked>
+                            Fresh mozz
+                        </label>
+                    </div>
+                    <div class="checkbox form-group">
+                        <label>
+                            <input type="checkbox" value="2">
+                            Dried mozz
+                        </label>
+                    </div>
+                    <div class="checkbox form-group">
+                        <label>
+                            <input type="checkbox" value="3">
+                            No cheese <small>wtf</small>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary">Send it out</button>
+            </div>
+        </form>
+
+    </div>
+
+</main>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
