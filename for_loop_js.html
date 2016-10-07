@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    /*for (var i = 1; i < 11; i++) {
+        if (i == 10) {
+
+        }
+        console.log(i.toString().repeat(i));
+    }*/
+    var j = 1;
+    for (var i = 1; i < 11; i++) {
+        if (i == 10) {
+            j = 0;
+            console.log(j.toString().repeat(i));
+        } else {
+            console.log(i.toString().repeat(j));
+        }
+        j++;
+    // Can't figure out how to do this without using repeat function. Return to this later.
+    }
+    var randomNumTable = Math.floor(Math.random() * 10);
+    for (var k = 0; k<= 10; k++) {
+        var product = randomNumTable * k;
+        console.log(randomNumTable + "x" + k + "=" + product);
+    }
+
+    for (var l = 0; l<=10; l++) {
+        var randomNum = Math.floor(Math.random() * 180) + 20;
+        var number = randomNum;
+        if (number % 2 == 0) {
+            console.log(number + " is even");
+        } else {
+            console.log(number + " is odd");
+        }
+    }
+
+    for (var m = 100; m > 0; m -= 5) {
+        console.log(m);
+    }
+
+</script>
+</body>
+</html>
