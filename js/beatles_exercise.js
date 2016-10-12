@@ -41,3 +41,20 @@ function toTable(names) {
 }
 
 console.log(toTable(names));
+
+//homework
+//take an array of strings contaiing all the states
+// return only states w/ the letter T.
+
+//make another function that returns a new array of all the states >= two "s" characters
+
+//make a function that squares each number on an array
+//take an array of numbers and make a forEach that multiplies each number by itself
+//function should return the arrayOfSquares
+
+//write a function that takes an array of lowercase names
+//uppercase the first letter of each name
+// and returns only the names that start with Y
+
+// write a function that takes an array of numbers 1-10
+//returns the sum of only the numbers divisible by 3
