@@ -48,7 +48,7 @@
     console.log("this is a filterd list of just names with a J\nThere are " + moreNames.length + " names in total in the list.");
     getJNames(moreNames);
     console.log("here is the full list...");
-    getNames(moreNames);
+    getNames(moreNames); asdflkj
     moreNames.forEach(function (element, index, array) {
 
         // element is the shape name
