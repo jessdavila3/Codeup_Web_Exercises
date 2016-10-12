@@ -49,7 +49,14 @@
     getJNames(moreNames);
     console.log("here is the full list...");
     getNames(moreNames);
+    moreNames.forEach(function (element, index, array) {
 
+        // element is the shape name
+        // index is the iterator
+        // array is the shapes array itself
+
+        console.log('The name at index ' + index + ' is: ' + element);
+    });
 
 
 })();
