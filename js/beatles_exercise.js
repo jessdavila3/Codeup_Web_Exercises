@@ -14,16 +14,16 @@ function toUpperCase(names) {
     return upperNames;
 }
 
-
 console.log(toUpperCase(names));
+
 
 
 var numbers = [1,2,3,4,5,6,7,8,9,10];
 
 function sumOfNumbers(numbers) {
-    var sum = 0;
+    var sum = 1;
     numbers.forEach(function (element, array) {
-        sum += element;
+        sum *= element;
         });
     return sum;
 }
