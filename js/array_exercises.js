@@ -42,8 +42,9 @@ function toTable(names) {
 
 console.log(toTable(names));
 
+
 //homework
-//take an array of strings contaiing all the states
+//take an array of strings containing all the states
 // return only states w/ the letter T.
 
 //make another function that returns a new array of all the states >= two "s" characters
@@ -58,3 +59,25 @@ console.log(toTable(names));
 
 // write a function that takes an array of numbers 1-10
 //returns the sum of only the numbers divisible by 3
+
+var states = ["California,", "Alabama,", "Arkansas,", "Arizona,", "Alaska,", "Colorado,", "Connecticut,", "Delaware,", "Florida,", "Georgia,", "Hawaii,", "Idaho,", "Illinois,", "Indiana,", "Iowa,", "Kansas,", "Kentucky,", "Louisiana,", "Maine,", "Maryland,", "Massachusetts,", "Michigan,", "Minnesota,", "Mississippi,", "Missouri,", "Montana,", "Nebraska,", "Nevada,", "New Hampshire,", "New Jersey,", "New Mexico,", "New York,", "North Carolina,", "North Dakota,", "Ohio,", "Oklahoma,", "Oregon,", "Pennsylvania,", "Rhode Island,", "South Carolina,", "South Dakota,", "Tennessee,", "Texas,", "Utah,", "Vermont,", "Virginia,", "Washington,", "West Virginia,", "Wisconsin,", "Wyoming"];
+var statesWithT = [];
+var statesWithTwoS = [];
+states.forEach(function (element, index,array) {
+    if (states[index].indexOf('T') !== -1) {
+        statesWithT.push(states[index]);
+    }
+});
+console.log(statesWithT);
+
+function showTwoS(states) {
+    states.forEach(function (element, index, array) {
+        if (states[index].toLowerCase().indexOf('s') < states[index].lastIndexOf('s')) {
+            statesWithTwoS.push(states[index]);
+        }
+        return statesWithTwoS;
+    });
+}
+showTwoS(states);
+console.log(statesWithTwoS);
+
