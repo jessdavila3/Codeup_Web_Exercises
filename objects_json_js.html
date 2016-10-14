@@ -53,6 +53,37 @@
         }
     ];
 
+    var music = [
+        {
+            "album": "In Rainbows",
+            "artist": "Radiohead",
+            "year": "2007",
+            "genre": ["alternative", "rock", "electronic", "hipster"]
+        },
+        {
+            "album": "Southeastern",
+            "artist": "Jason Isbell",
+            "year": "2013",
+            "genre": ["alternative", "country", "rock", "singer-songwriter"]
+        },
+        {
+            "album": "Voodoo",
+            "artist": "D'Angelo",
+            "year": "2000",
+            "genre": ["neo soul", "funk", "sould", "R&B"]
+        }
+    ];
+
+    music.forEach(function (element,index) {
+        console.log("Album: " + music[index].album);
+        console.log("Artist: " + music[index].artist);
+        console.log("Year: " + music[index].year);
+        console.log("Genres: " + music[index].genre.join(",  "));
+        console.log("------");
+
+    });
+
+
 
     // log out the books array
     console.log(books);
