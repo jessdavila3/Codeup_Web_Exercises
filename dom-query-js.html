@@ -25,24 +25,23 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="btn1">header buttton</button>
+<button id="btn2">sub header button</button>
+<button id="btn3">list items button</button>
+<button id="btn4">sub paragraph button</button>
+
 <script>
+
     (function() {
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById("main-header");
-
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+       /* var mainHeader = document.getElementById("main-header");
         mainHeader.innerHTML = "JavaScript is Cool";
-        // TODO: Uncomment the next line and get the sub header element by id
+
         var subHeader = document.getElementById("sub-header");
-
-        // TODO: Set the text color of subHeader to blue
         subHeader.style.color ="blue";
-        // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName('li');
-        console.log(dbId);
 
-        // TODO: Set text color on every other list item to grey
+        var listItems = document.getElementsByTagName('li');
+
         for (var i = 0; i < listItems.length; i++) {
             var dbId = listItems[i].getAttribute('data-dbid');
             if (i % 2 !== 0) {
@@ -52,14 +51,46 @@
             }
         }
 
-        // TODO: Set text color of li with dbid = 1 to blue
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
         console.log(subParagraphs);
 
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!";
+        subParagraphs[0].innerHTML = "Mission Accomplished!";*/
+
+        var listener1 = function(event) {
+            var mainHeader = document.getElementById("main-header");
+            mainHeader.innerHTML = "JavaScript is Cool";
+        };
+        document.getElementById("btn1").addEventListener('click', listener1, false);
+
+        var listener2 = function(event) {
+            var subHeader = document.getElementById("sub-header");
+            subHeader.style.color ="blue";
+        };
+        document.getElementById("btn2").addEventListener('click', listener2, false);
+
+        var listener3 = function (event) {
+            var listItems = document.getElementsByTagName('li');
+
+            for (var i = 0; i < listItems.length; i++) {
+                var dbId = listItems[i].getAttribute('data-dbid');
+                if (i % 2 !== 0) {
+                    listItems[i].style.color = 'grey';
+                } else if (dbId == 1) {
+                    listItems[i].style.color = 'blue';
+                }
+            }
+        };
+        document.getElementById("btn3").addEventListener('click', listener3, false);
+        
+        var listener4 = function (event) {
+            var subParagraphs = document.getElementsByClassName("sub-paragraph");
+            console.log(subParagraphs);
+
+            subParagraphs[0].innerHTML = "Mission Accomplished!";
+        };
+        document.getElementById("btn4").addEventListener('click', listener4, false);
+
     })();
 </script>
 </body>
