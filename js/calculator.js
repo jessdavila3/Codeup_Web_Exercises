@@ -6,6 +6,7 @@ var left = document.getElementById('leftNumberDisplay');
 var operand = document.getElementById('operandDisplay');
 var right = document.getElementById('rightNumberDisplay');
 var operation = 0;
+var refresh = false;
 
 function operate() { //this determines how or when to calculate, or to clear
     if (operand.innerHTML == '+') {
@@ -40,12 +41,21 @@ function calculate(operation) { // finds operator number and performs operation 
     } else if (operation == 4) {
         right.innerHTML = parseInt(left.innerHTML) / parseInt(right.innerHTML);
         left.innerHTML = '';
-    } else
-        alert('error');
+    } else {
+    alert('error');
+    }
+    refresh = true;
+
 }
 
 function populate() {
     var selected = this;
+    if (refresh) { /*this is a on off switch that resets the display after pressing a new number once you've hit equals*/
+        left.innerHTML = '';
+        right.innerHTML = '';
+        operand.innerHTML = '';
+        refresh = false;
+    }
     if (!isNaN(selected.innerHTML)) {
         if (operand.innerHTML == '') {
             left.innerHTML += selected.innerHTML;
