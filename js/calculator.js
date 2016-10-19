@@ -8,6 +8,16 @@ var right = document.getElementById('rightNumberDisplay');
 var operation = 0;
 var refresh = false;
 
+function clearDisplay(operation) {
+    if (operation) {
+        left.innerHTML = '';
+    } else {
+        left.innerHTML = '';
+        right.innerHTML = '';
+        operand.innerHTML = '';
+    }
+}
+
 function operate() { //this determines how or when to calculate, or to clear
     if (operand.innerHTML == '+') {
         operation = 1;
@@ -20,9 +30,7 @@ function operate() { //this determines how or when to calculate, or to clear
     } else if (operand.innerHTML == '=') {
         calculate(operation);
     } else if (operand.innerHTML == 'ac') {
-        left.innerHTML = '';
-        right.innerHTML = '';
-        operand.innerHTML = '';
+        clearDisplay();
     } else {
         alert("uhhh, there might be some sort of error going on here...");
     }
@@ -31,16 +39,16 @@ function operate() { //this determines how or when to calculate, or to clear
 function calculate(operation) { // finds operator number and performs operation on left and right variables.
     if (operation == 1) {
         right.innerHTML = parseFloat(left.innerHTML) + parseFloat(right.innerHTML);
-        left.innerHTML = '';
+        clearDisplay(operation);
     } else if (operation == 2) {
         right.innerHTML = parseFloat(left.innerHTML) - parseFloat(right.innerHTML);
-        left.innerHTML = '';
+        clearDisplay(operation);
     } else if (operation == 3) {
         right.innerHTML = parseFloat(left.innerHTML) * parseFloat(right.innerHTML);
-        left.innerHTML = '';
+        clearDisplay(operation);
     } else if (operation == 4) {
         right.innerHTML = parseFloat(left.innerHTML) / parseFloat(right.innerHTML);
-        left.innerHTML = '';
+        clearDisplay(operation);
     } else {
     alert('error');
     }
@@ -77,19 +85,7 @@ function populate() {
     }
 }
 
-document.getElementById('one').addEventListener('click', populate, false);
-document.getElementById('two').addEventListener('click', populate);
-document.getElementById('three').addEventListener('click', populate);
-document.getElementById('four').addEventListener('click', populate);
-document.getElementById('five').addEventListener('click', populate);
-document.getElementById('six').addEventListener('click', populate, false);
-document.getElementById('seven').addEventListener('click', populate, false);
-document.getElementById('eight').addEventListener('click', populate, false);
-document.getElementById('nine').addEventListener('click', populate, false);
-document.getElementById('zero').addEventListener('click', populate, false);
-document.getElementById('plus').addEventListener('click', populate, false);
-document.getElementById('minus').addEventListener('click', populate, false);
-document.getElementById('multiply').addEventListener('click', populate, false);
-document.getElementById('divide').addEventListener('click', populate, false);
-document.getElementById('equalTo').addEventListener('click', populate, false);
-document.getElementById('clear').addEventListener('click', populate, false);
+var buttons = document.getElementsByClassName('btn');
+for (var i = 0; buttons.length > i; i++) {
+    buttons[i].addEventListener('click', populate, false);
+}
