@@ -5,17 +5,33 @@ main {
 
 .calculator {
     width: 400px;
-    border: 1px solid black;
-    padding:3%;
-    margin-top: 35px;
+    border: 3px solid darkgray;
+    padding:2%;
+    margin-top: 60px;
     background-color: lightgray;
 }
 
+
+
 .key-spacing {
-    padding: 5%;
+    padding: 4%;
 }
 
 .calculator-dispay {
     height:80px;
 }
 
+.calculator-title {
+    margin-bottom: 20px;
+    margin-top: 5px;
+    padding-bottom: 15px;
+}
+
+#history {
+    margin-top: 60px;
+    border-right:1px solid lightgray;
+}
+
+p#text {
+    margin-top: 20px;
+}
