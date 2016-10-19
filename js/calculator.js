@@ -30,7 +30,7 @@ function populate() {
             operand.innerHTML = selected.innerHTML;
             operate(selected.innerHTML);
         } else if (left.innerHTML == '') {
-            alert('please select a number to perform an action on first')
+            alert('pick a number first');
             clearDisplay(selected);
         }
     }
@@ -45,7 +45,7 @@ function operate() { //this determines how or when to calculate, or to clear
         operation = 3;
     } else if (operand.innerHTML == '/') {
         operation = 4;
-    } else if (operand.innerHTML == '=') {
+    } else if (operand.innerHTML == '=' && right.innerHTML !== '') {
         calculate(operation);
     } else if (operand.innerHTML == 'ac') {
         clearDisplay();
@@ -68,8 +68,13 @@ function calculate(operation) { // finds operator number and performs operation 
         right.innerHTML = parseFloat(left.innerHTML) * parseFloat(right.innerHTML);
         clearDisplay(operation);
     } else if (operation == 4) {
-        right.innerHTML = parseFloat(left.innerHTML) / parseFloat(right.innerHTML);
-        clearDisplay(operation);
+        if (right.innerHTML == 0) {
+            alert("don't do that");
+            clearDisplay();
+        } else {
+            right.innerHTML = parseFloat(left.innerHTML) / parseFloat(right.innerHTML);
+            clearDisplay(operation);
+        }
     } else {
         alert('error');
     }

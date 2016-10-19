@@ -4,7 +4,7 @@ main {
 }
 
 .calculator {
-    width: 400px;
+    width: 50%;
     border: 3px solid darkgray;
     padding:2%;
     margin-top: 60px;
@@ -18,7 +18,9 @@ main {
 }
 
 .calculator-dispay {
-    height:80px;
+    height:70px;
+    width:85%;
+    margin-left: 30px;
 }
 
 .calculator-title {
@@ -30,9 +32,13 @@ main {
 #history {
     margin-top: 60px;
     border-right:1px solid lightgray;
-    padding: 0%;
+    padding: 0;
 }
 
 p#text {
     margin-top: 20px;
+}
+
+.btn {
+    width:100%;
 }
