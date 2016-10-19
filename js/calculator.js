@@ -50,7 +50,7 @@ function calculate(operation) { // finds operator number and performs operation 
         right.innerHTML = parseFloat(left.innerHTML) / parseFloat(right.innerHTML);
         clearDisplay(operation);
     } else {
-    alert('error');
+        alert('error');
     }
     refresh = true;
 }
@@ -67,8 +67,8 @@ function refreshDisplay(resetDisplay, number) {
 
 function populate() {
     var selected = this;
-    refreshDisplay(refresh,selected);
-    if (!isNaN(selected.innerHTML)) { /*if it's a number, place it appropriately*/
+    refreshDisplay(refresh, selected);
+    if (!isNaN(selected.innerHTML) || selected.innerHTML == '.') { /*if it's a number or a point, place it appropriately*/
         if (operand.innerHTML == '') {
             left.innerHTML += selected.innerHTML;
         } else if (operand.innerHTML !== '') {
