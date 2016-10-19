@@ -30,6 +30,7 @@ main {
 #history {
     margin-top: 60px;
     border-right:1px solid lightgray;
+    padding: 0%;
 }
 
 p#text {
