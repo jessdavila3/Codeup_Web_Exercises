@@ -56,8 +56,7 @@ function operate() { //this determines how or when to calculate, or to clear
 
 function calculate(operation) { // finds operator number and performs operation on left and right variables.
     var i = 0;
-    var historyOperand = operation;
-    logHistory(historyOperand);
+    logHistory(operation);
     if (operation == 1) {
         right.innerHTML = parseFloat(left.innerHTML) + parseFloat(right.innerHTML);
         clearDisplay(operation);
