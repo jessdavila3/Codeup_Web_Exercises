@@ -53,21 +53,21 @@ function calculate(operation) { // finds operator number and performs operation 
     alert('error');
     }
     refresh = true;
+}
 
+function refreshDisplay(resetDisplay, number) {
+    if (resetDisplay && isNaN(number.innerHTML)) {
+        left.innerHTML = right.innerHTML;
+        right.innerHTML = '';
+    } else if (resetDisplay) {
+        clearDisplay();
+    }
+    refresh = false;
 }
 
 function populate() {
     var selected = this;
-    if (refresh && isNaN(selected.innerHTML)) { /*this is a on off switch that resets the display after pressing a new number once you've hit equals*/
-        left.innerHTML = right.innerHTML;
-        right.innerHTML = '';
-        refresh = false;
-    } else if (refresh) {
-        left.innerHTML = '';
-        right.innerHTML = '';
-        operand.innerHTML = '';
-        refresh = false;
-    }
+    refreshDisplay(refresh,selected);
     if (!isNaN(selected.innerHTML)) { /*if it's a number, place it appropriately*/
         if (operand.innerHTML == '') {
             left.innerHTML += selected.innerHTML;
