@@ -12,7 +12,6 @@ var buttons = document.getElementsByClassName('btn');
 
 for (var i = 0; buttons.length > i; i++) {
     buttons[i].addEventListener('click', populate, false);
-
 }
 
 function populate() {
@@ -130,9 +129,3 @@ function logHistory(operand) {
     }
     i++;
 }
-
-
-
-
-
-
