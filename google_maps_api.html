@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+<div id="map-canvas"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXYZuPj86pM5aGUm-Gv_P4HHxOcWOu6IU"></script>
+<script type="text/javascript">
+        (function() {
+        "use strict";
+            var geocoder = new google.maps.Geocoder();
+            var favoriteRestaurant = "1201 S Lamar Blvd, Austin, TX 78704";
+            var mapOptions = {
+            zoom: 18,
+
+            center: {
+                lat:  29.426791,
+                lng: -98.489602
+            }
+            };
+            geocoder.geocode({ "address": favoriteRestaurant }, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                } else {
+                    alert("Geocoding was not successful - STATUS: " + status);
+                }
+            });
+            var oddDuck = { lat: 30.2546627, lng: -97.762029};
+
+            // Render the map
+            var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+            var marker = new google.maps.Marker({
+                position: oddDuck,
+                map: map
+            });
+            var infowindow = new google.maps.InfoWindow({
+                content: "The best pig face roll you've ever had.<br><strong>Price:</strong> kind of pricey.<br><strong>Style:</strong> small plates"
+            });
+            infowindow.open(map, marker);
+        })();
+</script>
+</body>
