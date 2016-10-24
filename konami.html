@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>konami code</title>
+</head>
+<body>
+    <h1>Konami Code</h1>
+    <h2>lives: 0</h2>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+    var konamiCode = [38,38,40,40,37,39,37,39,66,65,13];
+    var keysPushed = [];
+    var lives = 0;
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+        keysPushed.push(event.keyCode);
+        if (keysPushed.toString().indexOf(konamiCode) >= 0) {
+            alert('+30 lives');
+            $('h2').html("lives: " + (lives+=30));
+            keysPushed = [];
+        }
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>National Parks FAQ</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<main class="container">
+    <h1>National Parks FAQ</h1>
+    <dl>
+        <dt>Who's the director of the NPS?</dt>
+        <dd class="invisible">Johnathan B. Jarvis</dd>
+        <dt>What does NPS stand for?</dt>
+        <dd class="invisible">National Park Service</dd>
+        <dt>How old is the NPS?</dt>
+        <dd class="invisible">The NPS was created on August 25, 1916</dd>
+        <dt>What is the largest park site?</dt>
+        <dd class="invisible">Wrangell-St. Elias National Park + Preserve in AK at 13.2 million acres</dd>
+        <dt>Smallest?</dt>
+        <dd class="invisible">Thaddeus Kosciuszko National Memorial in PA at .02 acres</dd>
+    </dl>
+    <button id='reveal' class="btn btn-primary">Show answers</button>
+
+</main>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    /*$(document).ready(function() {
+        var $dd = $('dd').html();
+        console.log($dd);
+        $('#reveal').click(function(event) {
+            event.preventDefault();
+            $dd.toggleClass('invisible');
+        });
+    });*/
+
+    $('#reveal').click(function() {
+        console.log('hey');
+        $('dd').toggleClass('invisible');
+    });
+</script>
+</body>
+</html>
