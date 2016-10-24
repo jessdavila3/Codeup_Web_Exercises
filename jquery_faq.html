@@ -15,16 +15,16 @@
     </div>
     <dl class="list-group">
         <dt class="list-group-item-info">Who's the director of the NPS?</dt>
-        <dd class="invisible list-group-item">Johnathan B. Jarvis</dd>
+        <dd class="list-group-item">Johnathan B. Jarvis</dd>
         <dt class="list-group-item-info">What does NPS stand for?</dt>
-        <dd class="invisible list-group-item">National Park Service</dd>
+        <dd class="list-group-item">National Park Service</dd>
         <dt class="list-group-item-info">How old is the NPS?</dt>
-        <dd class="invisible list-group-item">The NPS was created on August 25, 1916</dd>
+        <dd class="list-group-item">The NPS was created on August 25, 1916</dd>
         <dt class="list-group-item-info">What is the largest park site?</dt>
-        <dd class="invisible list-group-item">Wrangell-St. Elias National Park + Preserve in AK at 13.2 million acres
+        <dd class="list-group-item">Wrangell-St. Elias National Park + Preserve in AK at 13.2 million acres
         </dd>
         <dt class="list-group-item-info">Smallest?</dt>
-        <dd class="invisible list-group-item">Thaddeus Kosciuszko National Memorial in PA at .02 acres</dd>
+        <dd class="list-group-item">Thaddeus Kosciuszko National Memorial in PA at .02 acres</dd>
     </dl>
     <div class="panel">
         <button id='reveal' class="btn btn-primary center-block">Show/Hide answers</button>
@@ -38,7 +38,7 @@
         <h3>Lassen</h3>
         <ul>
             <li>Declared a park on August 9, 1916</li>
-            <li>Area around Lassen Peak is still ative with boiling mud pots and churning hot springs</li>
+            <li>Area around Lassen Peak is still active with boiling mud pots and churning hot springs</li>
             <li>5 mile hike round trip</li>
             <li>cinder cone volcano</li>
         </ul>
@@ -72,20 +72,20 @@
 <script>
 
     $('#reveal').on('click', function (e) { // toggle button to reveal FAQ answers
-        $('dd').toggleClass('invisible');
+        $('dd').slideToggle();
     });
 
-    $('ul').each(function (index) { // first item of each ul is bold
+    $('ul').each(function () { // first item of each ul is bold
         $(this).children('li').first().css('font-weight', 'bold');
     });
 
-    $('li').on('click', function (e) { // click on a li item and it's parent ul is invisible
+    $('li').on('click', function () { // click on a li item and it's parent ul is invisible
         var li = $(this);
-        li.parent().addClass('invisible')
+        li.parent().fadeOut();
     });
 
-    $('#reset').on('click', function (e) {
-        $('ul').removeClass('invisible');
+    $('#reset').on('click', function () {
+        $('ul').slideDown();
     })
 
 </script>
