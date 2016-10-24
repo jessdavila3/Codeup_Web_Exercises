@@ -9,7 +9,9 @@
 <body>
 <main class="container">
     <div class="jumbotron">
-        <h1 class="text-center">National Parks FAQ<br><small>that means Frequently Asked Questions</small></h1>
+        <h1 class="text-center">National Parks FAQ<br>
+            <small>that means Frequently Asked Questions</small>
+        </h1>
     </div>
     <dl class="list-group">
         <dt class="list-group-item-info">Who's the director of the NPS?</dt>
@@ -19,55 +21,71 @@
         <dt class="list-group-item-info">How old is the NPS?</dt>
         <dd class="invisible list-group-item">The NPS was created on August 25, 1916</dd>
         <dt class="list-group-item-info">What is the largest park site?</dt>
-        <dd class="invisible list-group-item">Wrangell-St. Elias National Park + Preserve in AK at 13.2 million acres</dd>
+        <dd class="invisible list-group-item">Wrangell-St. Elias National Park + Preserve in AK at 13.2 million acres
+        </dd>
         <dt class="list-group-item-info">Smallest?</dt>
         <dd class="invisible list-group-item">Thaddeus Kosciuszko National Memorial in PA at .02 acres</dd>
     </dl>
-    <button id='reveal' class="btn btn-primary center-block">Show answers</button>
-    <div class="jumbotron">
-        <h1>About some of our parks</h1>
+    <div class="panel">
+        <button id='reveal' class="btn btn-primary center-block">Show/Hide answers</button>
     </div>
-    <h3>Lassen</h3>
-    <ul>
-        <li>Declared a park on August 9, 1916</li>
-        <li>Area around Lassen Peak is still ative with boiling mud pots and churning hot springs</li>
-        <li>5 mile hike round trip</li>
-        <li>cinder cone volcano</li>
-    </ul>
-    <h3>Mammoth</h3>
-    <ul>
-        <li>"slow time" meaning Central Time</li>
-        <li>Cave tours offered</li>
-        <li>Park hikes and ride horses on more than 70 miles of trails.</li>
-        <li><a href="http://mammothcavehotel.com/" target="_blank">Mammoth Cave Hotel</a> available for lodging </li>
-    </ul>
-    <h3>Niagra</h3>
-    <ul>
-        <li>Named from French explorers who named the Indian tribe the "Neutrals".</li>
-        <li>Erodes at a rate of .7 meters per year</li>
-        <li>15 people have challenged the falls of Niagra since 1901</li>
-        <li>Dog friendly</li>
-    </ul>
+    <div class="jumbotron">
+        <h1 class="text-center">About Some of Our Parks <br>
+            <small>(the cohort ones)</small>
+        </h1>
+    </div>
+    <div class="panel">
+        <h3>Lassen</h3>
+        <ul>
+            <li>Declared a park on August 9, 1916</li>
+            <li>Area around Lassen Peak is still ative with boiling mud pots and churning hot springs</li>
+            <li>5 mile hike round trip</li>
+            <li>cinder cone volcano</li>
+        </ul>
+    </div>
+    <div class="panel">
+        <h3>Mammoth</h3>
+        <ul>
+            <li>"slow time" meaning Central Time</li>
+            <li>Cave tours offered</li>
+            <li>Park hikes and ride horses on more than 70 miles of trails.</li>
+            <li><a href="http://mammothcavehotel.com/" target="_blank">Mammoth Cave Hotel</a> available for lodging</li>
+        </ul>
+    </div>
+    <div class="panel">
+        <h3>Niagra</h3>
+        <ul>
+            <li>Named from French explorers who named the Indian tribe the "Neutrals".</li>
+            <li>Erodes at a rate of .7 meters per year</li>
+            <li>15 people have challenged the falls of Niagra since 1901</li>
+            <li>Dog friendly</li>
+        </ul>
+    </div>
+    <div class="panel">
+        <a id="reset" class="btn btn-primary center-block"><u>Reset Info Text</u></a>
+    </div>
+
 </main>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="js/bootstrap.js"></script>
 <script>
 
-   /* $('#reveal').click(function() {
-        $('dd').toggleClass('invisible');
-    });*/
-
-    $('#reveal').on('click', function(e) { // toggle button to reveal FAQ answers
+    $('#reveal').on('click', function (e) { // toggle button to reveal FAQ answers
         $('dd').toggleClass('invisible');
     });
 
-    $('ul').each(function(index) { // first item of each ul is bold
-        $(this).children('li').first().css('font-weight','bold');
+    $('ul').each(function (index) { // first item of each ul is bold
+        $(this).children('li').first().css('font-weight', 'bold');
     });
 
-    $('li').on('click', function(e) { // click on a li item and it's parent ul is invisible
+    $('li').on('click', function (e) { // click on a li item and it's parent ul is invisible
         var li = $(this);
         li.parent().addClass('invisible')
+    });
+
+    $('#reset').on('click', function (e) {
+        $('ul').removeClass('invisible');
     })
 
 </script>
