@@ -30,12 +30,12 @@
 
     function addItems(response) {
         response.forEach(function(response){
-            contents += "<tr><td> "+response.title+" </td><td>"+response.quantity+"</td><td> " + response.price + "</td><td> " + response.categories + "</td></tr>"
+            contents += "<tr><td> "+response.title+" </td><td>"+response.quantity+"</td><td> " + response.price + "</td><td> " + response.categories.join(', ') + "</td></tr>"
         });
         $('#insertProducts').html(contents);
     }
 
-    var data = $.ajax("data/inventory.json");
+    var data = $.ajax("data/inventory
     data.done(function(response) {
         console.log(response);
         addItems(response);
@@ -48,16 +48,12 @@
 
     $('.btn').click(function() {
         var data = $.ajax("data/inventory.json");
+        contents = '';
         data.done(function(response) {
             addItems(response);
         })
     });
 
-
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
 })();
 </script>
 
