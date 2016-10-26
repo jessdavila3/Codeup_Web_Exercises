@@ -40,14 +40,14 @@
                 + "Wind: " + data.list[0].speed + "<br>"
                 + "Pressure: " + data.list[0].pressure
         );
-        /*$("#boxSecond").append(
-                data.main.temp_max + "&#176; /" + data.main.temp_min + "&#176" + "<br>"
-                + "<img src=http://openweathermap.org/img/w/"+data.weather[0].icon+".png><br>"
-                + "Clouds: " + data.weather[0].description + "<br>"
-                + "Humidity: " + data.main.humidity + "<br>"
-                + "Wind: " + data.wind.speed + "<br>"
-                + "Pressure: " + data.main.pressure
-        );*/
+        $("#boxSecond").append(
+                data.list[1].temp.min + "&#176; /" + data.list[1].temp.max + "&#176" + "<br>"
+                + "<img src=http://openweathermap.org/img/w/"+data.list[1].weather[0].icon+".png><br>"
+                + "Clouds: " + data.list[1].clouds + "<br>"
+                + "Humidity: " + data.list[1].humidity + "<br>"
+                + "Wind: " + data.list[1].speed + "<br>"
+                + "Pressure: " + data.list[1].pressure
+        );
     }
 
 
