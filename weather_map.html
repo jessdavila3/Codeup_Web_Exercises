@@ -19,13 +19,13 @@
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script>
-    $.get("http://api.openweathermap.org/data/2.5/weather", {
+    $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
         APPID: "c458a07f7c5e54192932e48071aecbd2",
-        q:      "San Antonio, TX",
-        units: "imperial"
+        units: "imperial",
+        q:      "San Antonio, TX"
     }).done(function(data) {
-        fillData(data);
         console.log(data);
+        fillData(data);
     }).fail(function (error) {
         console.log(error);
     });
@@ -33,13 +33,21 @@
     function fillData(data) {
         $("#cityName").html(data.name);
         $("#boxFirst").append(
+                data.list[0].temp.min + "&#176; /" + data.list[0].temp.max + "&#176" + "<br>"
+                + "<img src=http://openweathermap.org/img/w/"+data.list[0].weather[0].icon+".png><br>"
+                + "Clouds: " + data.list[0].clouds + "<br>"
+                + "Humidity: " + data.list[0].humidity + "<br>"
+                + "Wind: " + data.list[0].speed + "<br>"
+                + "Pressure: " + data.list[0].pressure
+        );
+        /*$("#boxSecond").append(
                 data.main.temp_max + "&#176; /" + data.main.temp_min + "&#176" + "<br>"
                 + "<img src=http://openweathermap.org/img/w/"+data.weather[0].icon+".png><br>"
                 + "Clouds: " + data.weather[0].description + "<br>"
                 + "Humidity: " + data.main.humidity + "<br>"
                 + "Wind: " + data.wind.speed + "<br>"
                 + "Pressure: " + data.main.pressure
-        );
+        );*/
     }
 
 
