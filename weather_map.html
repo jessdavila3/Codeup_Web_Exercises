@@ -34,6 +34,7 @@
         $("#cityName").html(data.name);
         $("#boxFirst").append(
                 data.main.temp_max + "&#176; /" + data.main.temp_min + "&#176" + "<br>"
+                + "<img src=http://openweathermap.org/img/w/"+data.weather[0].icon+".png><br>"
                 + "Clouds: " + data.weather[0].description + "<br>"
                 + "Humidity: " + data.main.humidity + "<br>"
                 + "Wind: " + data.wind.speed + "<br>"
