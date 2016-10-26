@@ -24,15 +24,12 @@
 <script>
 (function() {
     "use strict";
+    var contents = '';
     function addItems(response) {
-        console.log(response);
-        var tableBody = $('#insertProducts');
-        tableBody = "<tr>";
-        console.log(response.length);
         response.forEach(function(response){
-            tableBody += "<td>"+response.title+"</td>"+"<td>"+response.quantity+"</td>"
+            contents += "<tr><td> "+response.title+" </td><td>"+response.quantity+"</td><td> " + response.price + "</td><td> " + response.categories + "</td></tr>"
         });
-        console.log(tableBody.html());
+        $('#insertProducts').html(contents);
     }
     var data = $.ajax("data/inventory.json");
     data.done(function(response) {
