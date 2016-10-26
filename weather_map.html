@@ -22,7 +22,7 @@
     $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
         APPID: "c458a07f7c5e54192932e48071aecbd2",
         units: "imperial",
-        q:      "San Antonio, TX"
+        q:      "Seguin, TX"
     }).done(function(data) {
         console.log(data);
         fillData(data);
@@ -31,9 +31,9 @@
     });
 
     function fillData(data) {
-        $("#cityName").html(data.name);
+        $("#cityName").html(data.city.name);
         $("#boxFirst").append(
-                data.list[0].temp.min + "&#176; /" + data.list[0].temp.max + "&#176" + "<br>"
+                data.list[0].temp.max + "&#176; /" + data.list[0].temp.min + "&#176" + "<br>"
                 + "<img src=http://openweathermap.org/img/w/"+data.list[0].weather[0].icon+".png><br>"
                 + "Clouds: " + data.list[0].clouds + "<br>"
                 + "Humidity: " + data.list[0].humidity + "<br>"
@@ -41,13 +41,22 @@
                 + "Pressure: " + data.list[0].pressure
         );
         $("#boxSecond").append(
-                data.list[1].temp.min + "&#176; /" + data.list[1].temp.max + "&#176" + "<br>"
+                data.list[1].temp.max + "&#176; /" + data.list[1].temp.min + "&#176" + "<br>"
                 + "<img src=http://openweathermap.org/img/w/"+data.list[1].weather[0].icon+".png><br>"
                 + "Clouds: " + data.list[1].clouds + "<br>"
                 + "Humidity: " + data.list[1].humidity + "<br>"
                 + "Wind: " + data.list[1].speed + "<br>"
                 + "Pressure: " + data.list[1].pressure
         );
+        $("#boxThird").append(
+                data.list[2].temp.max + "&#176; /" + data.list[2].temp.min + "&#176" + "<br>"
+                + "<img src=http://openweathermap.org/img/w/"+data.list[2].weather[0].icon+".png><br>"
+                + "Clouds: " + data.list[2].clouds + "<br>"
+                + "Humidity: " + data.list[2].humidity + "<br>"
+                + "Wind: " + data.list[2].speed + "<br>"
+                + "Pressure: " + data.list[2].pressure
+        );
+
     }
 
 
