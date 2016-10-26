@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<main class="container">
+    <h1>Weather Application</h1>
+    <h2 id="cityName"></h2>
+    <div class="row">
+        <div class="col-md-4" id="boxFirst"></div>
+        <div class="col-md-4" id="boxSecond"></div>
+        <div class="col-md-4" id="boxThird"></div>
+    </div>
+
+</main>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    $.get("http://api.openweathermap.org/data/2.5/weather", {
+        APPID: "c458a07f7c5e54192932e48071aecbd2",
+        q:      "San Antonio, TX",
+        units: "imperial"
+    }).done(function(data) {
+        fillData(data);
+        console.log(data);
+    }).fail(function (error) {
+        console.log(error);
+    });
+
+    function fillData(data) {
+        $("#cityName").html(data.name);
+        $("#boxFirst").append(
+                data.main.temp_max + "&#176; /" + data.main.temp_min + "&#176" + "<br>"
+                + "Clouds: " + data.weather[0].description + "<br>"
+                + "Humidity: " + data.main.humidity + "<br>"
+                + "Wind: " + data.wind.speed + "<br>"
+                + "Pressure: " + data.main.pressure
+        );
+    }
+
+
+
+</script>
+
+</body>
+</html>
