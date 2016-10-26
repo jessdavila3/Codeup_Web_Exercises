@@ -7,9 +7,30 @@
 </head>
 <body>
 <main class="container">
-
+    <h1>Blog</h1>
+    <div id="posts"></div>
 </main>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
+<script>
+    var contents = '';
+    var data = $.get("data/blog.json");
+
+    function fillBlog(data) {
+        data.forEach(function(data) {
+            contents += "<h2>" + data.title + "<br><small>" + data.date +"</small></h2><p>" + data.content + "</p><small><h5>Categories:</h5>" + data.categories + "</small>"
+        });
+        $('#posts').html(contents);
+    }
+    data.fail(function() {
+        alert("wtf")
+    }).always(function() {
+        console.log("i'm working!")
+    }).done(function(response) {
+        fillBlog(response);
+    })
+
+
+</script>
 </body>
 </html>
