@@ -24,12 +24,13 @@
 <script src="js/bootstrap.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXYZuPj86pM5aGUm-Gv_P4HHxOcWOu6IU"></script>
 <script>
+
     var myMarker = new google.maps.Marker({
         position: new google.maps.LatLng(29.426791,-98.489602),
         draggable: true
     });
     var mapOptions = {
-        zoom: 10
+        zoom: 12
     };
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
     map.setCenter(myMarker.position);
@@ -49,9 +50,10 @@
         });
     }
     refreshMap();
+
     function fillData(data) {
         $("#cityName").html(data.city.name);
-        $(".col-sm-4").each(function(index,element) {
+        $(".col-sm-4").each(function(index) {
             $(this).html(
                     "<span>" + data.list[index].temp.max.toFixed(index) + "&#176;/" + data.list[index].temp.min.toFixed() + "&#176" + "</span><br>"
                     + "<img src=http://openweathermap.org/img/w/"+data.list[index].weather[0].icon+".png><br>"
@@ -60,7 +62,6 @@
                     + "<strong>Wind:</strong> " + data.list[index].speed + "<br>"
                     + "<strong>Pressure:</strong> " + data.list[index].pressure
             );
-            console.log(element);
         });
     }
 
@@ -113,19 +114,6 @@
             console.log(error);
         });
     }*/
-
-
-
-//    setMap(29.426791,-98.489602);
-
-
-
-
-
-
-
-
-
 </script>
 
 </body>
