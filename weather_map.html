@@ -17,6 +17,7 @@
             <div class="col-md-4 box-last" id="boxThird"></div>
         </div>
     </div>
+    <div id="map-canvas"></div>
     <div class="form-group">
         <label for="latitude">Latitude:</label>
         <input type="text" class="form-control" id="latitude">
@@ -29,6 +30,7 @@
 </main>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXYZuPj86pM5aGUm-Gv_P4HHxOcWOu6IU"></script>
 <script>
     $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
         APPID: "c458a07f7c5e54192932e48071aecbd2",
@@ -70,27 +72,44 @@
 
     }
 
-    $("#sendCoordinates").click(function() {
-        var latitude = $("#latitude").val();
-        console.log(latitude);
-        var longitude = $("#longitude").val();
-        console.log(longitude);
-        fillMap(latitude, longitude);
-    });
-
-    function fillMap(lat,long) {
+    function fillMap() {
         $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
             APPID: "c458a07f7c5e54192932e48071aecbd2",
             units: "imperial",
-            lat: lat,
-            lon: long
+            lat: myMarker.getPosition().lat(),
+            lon: myMarker.getPosition().lng()
         }).done(function(data) {
             console.log(data);
             fillData(data);
+            map.setCenter(data);
         }).fail(function (error) {
             console.log(error);
         });
     }
+
+    $("#sendCoordinates").click(function() { //press button to gather lat and long and send it to fillMap
+        var latitude = $("#latitude").val();
+        var longitude = $("#longitude").val();
+        fillMap(latitude, longitude);
+    });
+
+
+//    setMap(29.426791,-98.489602);
+
+    var myMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(29.426791,-98.489602),
+        draggable: true
+    });
+    var mapOptions = {
+        zoom: 10
+    };
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    map.setCenter(myMarker.position);
+    myMarker.setMap(map);
+
+
+
+
 
 
 
