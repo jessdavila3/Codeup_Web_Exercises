@@ -6,6 +6,7 @@ body {
 .weather-display {
     background-color: lightgray;
     border: solid 1px black;
+    margin-bottom: 3%;
 }
 
 .box {
@@ -29,6 +30,15 @@ body {
     font-weight: bold;
 }
 
+#boxFirst {
+}
+
+#boxSecond {
+}
+
+#boxthird {
+}
+
 #map-canvas {
     width: 100%;
     height: 460px;
@@ -36,10 +46,10 @@ body {
 }
 
 #cityName {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 img {
-    width: 80px;
-    height:80px;
+    width: 60px;
+    height:60px;
 }
