@@ -55,7 +55,7 @@
         $("#cityName").html(data.city.name);
         $(".col-sm-4").each(function(index) {
             $(this).html(
-                    "<span>" + data.list[index].temp.max.toFixed(index) + "&#176;/" + data.list[index].temp.min.toFixed() + "&#176" + "</span><br>"
+                    "<span>" + data.list[index].temp.max.toFixed(0) + "&#176;/" + data.list[index].temp.min.toFixed(0) + "&#176" + "</span><br>"
                     + "<img src=http://openweathermap.org/img/w/"+data.list[index].weather[0].icon+".png><br>"
                     + "<strong>Clouds:</strong> " + data.list[index].weather[0].description + "<br>"
                     + "<strong>Humidity:</strong> " + data.list[index].humidity + "<br>"
@@ -65,55 +65,11 @@
         });
     }
 
-    /*function fillData(data) {
-        $("#cityName").html(data.city.name);
-        $("#boxFirst").html(
-                "<span>" + data.list[0].temp.max.toFixed(0) + "&#176;/" + data.list[0].temp.min.toFixed(0) + "&#176" + "</span><br>"
-                + "<img src=http://openweathermap.org/img/w/"+data.list[0].weather[0].icon+".png><br>"
-                + "<strong>Clouds:</strong> " + data.list[0].weather[0].description + "<br>"
-                + "<strong>Humidity:</strong> " + data.list[0].humidity + "<br>"
-                + "<strong>Wind:</strong> " + data.list[0].speed + "<br>"
-                + "<strong>Pressure:</strong> " + data.list[0].pressure
-        );
-        $("#boxSecond").html(
-                "<span>" + data.list[1].temp.max.toFixed(0) + "&#176;/" + data.list[1].temp.min.toFixed(0) + "&#176" + "</span><br>"
-                + "<img src=http://openweathermap.org/img/w/"+data.list[1].weather[0].icon+".png><br>"
-                + "<strong>Clouds:</strong> " + data.list[1].weather[0].description + "<br>"
-                + "<strong>Humidity:</strong> " + data.list[1].humidity + "<br>"
-                + "<strong>Wind:</strong> " + data.list[1].speed + "<br>"
-                + "<strong>Pressure:</strong> " + data.list[1].pressure
-        );
-        $("#boxThird").html(
-                "<span>" + data.list[2].temp.max.toFixed(0) + "&#176;/" + data.list[2].temp.min.toFixed(0) + "&#176" + "</span><br>"
-                + "<img src=http://openweathermap.org/img/w/"+data.list[2].weather[0].icon+".png><br>"
-                + "<strong>Clouds:</strong> " + data.list[2].weather[0].description + "<br>"
-                + "<strong>Humidity:</strong> " + data.list[2].humidity + "<br>"
-                + "<strong>Wind:</strong> " + data.list[2].speed + "<br>"
-                + "<strong>Pressure:</strong> " + data.list[2].pressure
-        );
-
-    }*/
-
     google.maps.event.addListener(myMarker, 'dragend', function() {
         map.setCenter(myMarker.position);
         refreshMap();
     });
 
-
-    /*function fillMap() {
-        $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
-            APPID: "c458a07f7c5e54192932e48071aecbd2",
-            units: "imperial",
-            lat:
-            lon:
-        }).done(function(data) {
-            console.log(data);
-            fillData(data);
-            map.setCenter(data);
-        }).fail(function (error) {
-            console.log(error);
-        });
-    }*/
 </script>
 
 </body>
