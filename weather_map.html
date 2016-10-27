@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/weather_map_style.css">
 </head>
 <body>
 <main class="container">
     <h1>Weather Application</h1>
-    <h2 id="cityName"></h2>
-    <div class="row">
-        <div class="col-md-4" id="boxFirst"></div>
-        <div class="col-md-4" id="boxSecond"></div>
-        <div class="col-md-4" id="boxThird"></div>
+    <div class="weather-display">
+        <h2 id="cityName" class="text-center"></h2>
+        <div class="row">
+            <div class="col-md-4 box" id="boxFirst"></div>
+            <div class="col-md-4 box" id="boxSecond"></div>
+            <div class="col-md-4 box-last" id="boxThird"></div>
+        </div>
     </div>
+    <div class="form-group">
+        <label for="latitude">Latitude:</label>
+        <input type="text" class="form-control" id="latitude">
+        <label for="longitude">Longitude:</label>
+        <input type="text" class="form-control" id="longitude">
+        <button id="sendCoordinates" class="btn btn-default">Search</button>
+    </div>
+
 
 </main>
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -22,7 +33,7 @@
     $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
         APPID: "c458a07f7c5e54192932e48071aecbd2",
         units: "imperial",
-        q:      "Seguin, TX"
+        q:      "San Antonio, TX"
     }).done(function(data) {
         console.log(data);
         fillData(data);
@@ -32,32 +43,55 @@
 
     function fillData(data) {
         $("#cityName").html(data.city.name);
-        $("#boxFirst").append(
-                data.list[0].temp.max + "&#176; /" + data.list[0].temp.min + "&#176" + "<br>"
+        $("#boxFirst").html(
+                "<span>" + data.list[0].temp.max + "&#176; /" + data.list[0].temp.min + "&#176" + "</span><br>"
                 + "<img src=http://openweathermap.org/img/w/"+data.list[0].weather[0].icon+".png><br>"
-                + "Clouds: " + data.list[0].clouds + "<br>"
-                + "Humidity: " + data.list[0].humidity + "<br>"
-                + "Wind: " + data.list[0].speed + "<br>"
-                + "Pressure: " + data.list[0].pressure
+                + "<strong>Clouds:</strong> " + data.list[0].weather[0].description + "<br>"
+                + "<strong>Humidity:</strong> " + data.list[0].humidity + "<br>"
+                + "<strong>Wind:</strong> " + data.list[0].speed + "<br>"
+                + "<strong>Pressure:</strong> " + data.list[0].pressure
         );
-        $("#boxSecond").append(
-                data.list[1].temp.max + "&#176; /" + data.list[1].temp.min + "&#176" + "<br>"
+        $("#boxSecond").html(
+                "<span>" + data.list[1].temp.max + "&#176; /" + data.list[1].temp.min + "&#176" + "</span><br>"
                 + "<img src=http://openweathermap.org/img/w/"+data.list[1].weather[0].icon+".png><br>"
-                + "Clouds: " + data.list[1].clouds + "<br>"
-                + "Humidity: " + data.list[1].humidity + "<br>"
-                + "Wind: " + data.list[1].speed + "<br>"
-                + "Pressure: " + data.list[1].pressure
+                + "<strong>Clouds:</strong> " + data.list[1].weather[0].description + "<br>"
+                + "<strong>Humidity:</strong> " + data.list[1].humidity + "<br>"
+                + "<strong>Wind:</strong> " + data.list[1].speed + "<br>"
+                + "<strong>Pressure:</strong> " + data.list[1].pressure
         );
-        $("#boxThird").append(
-                data.list[2].temp.max + "&#176; /" + data.list[2].temp.min + "&#176" + "<br>"
+        $("#boxThird").html(
+                "<span>" + data.list[2].temp.max + "&#176; /" + data.list[2].temp.min + "&#176" + "</span><br>"
                 + "<img src=http://openweathermap.org/img/w/"+data.list[2].weather[0].icon+".png><br>"
-                + "Clouds: " + data.list[2].clouds + "<br>"
-                + "Humidity: " + data.list[2].humidity + "<br>"
-                + "Wind: " + data.list[2].speed + "<br>"
-                + "Pressure: " + data.list[2].pressure
+                + "<strong>Clouds:</strong> " + data.list[2].weather[0].description + "<br>"
+                + "<strong>Humidity:</strong> " + data.list[2].humidity + "<br>"
+                + "<strong>Wind:</strong> " + data.list[2].speed + "<br>"
+                + "<strong>Pressure:</strong> " + data.list[2].pressure
         );
 
     }
+
+    $("#sendCoordinates").click(function() {
+        var latitude = $("#latitude").val();
+        console.log(latitude);
+        var longitude = $("#longitude").val();
+        console.log(longitude);
+        fillMap(latitude, longitude);
+    });
+
+    function fillMap(lat,long) {
+        $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+            APPID: "c458a07f7c5e54192932e48071aecbd2",
+            units: "imperial",
+            lat: lat,
+            lon: long
+        }).done(function(data) {
+            console.log(data);
+            fillData(data);
+        }).fail(function (error) {
+            console.log(error);
+        });
+    }
+
 
 
 

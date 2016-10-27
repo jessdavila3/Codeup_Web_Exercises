@@ -1,0 +1,32 @@
+body {
+    background-color: lightblue;
+    font-size: 1.5em;
+}
+
+.weather-display {
+    background-color: lightgray;
+    border: solid 1px black;
+}
+
+.box {
+    border-right: solid 1px black;
+    margin-bottom: 2%;
+    padding:5%;
+    text-align: center;
+}
+
+.box-last {
+    margin-bottom: 2%;
+    padding:5%;
+    text-align: center;
+}
+
+.box>span {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.box-last>span {
+    font-size: 2em;
+    font-weight: bold;
+}
