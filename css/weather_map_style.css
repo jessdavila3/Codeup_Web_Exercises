@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background-image: url("../img/weather.png");
     font-size: 1.5em;
 }
 
@@ -10,15 +10,13 @@ body {
 
 .box {
     border-right: solid 1px black;
-    margin-bottom: 2%;
-    padding:5%;
     text-align: center;
+    margin-bottom: 1%;
 }
 
 .box-last {
-    margin-bottom: 2%;
-    padding:5%;
     text-align: center;
+    margin-bottom: 1%;
 }
 
 .box>span {
@@ -33,5 +31,15 @@ body {
 
 #map-canvas {
     width: 100%;
-    height: 481px;
+    height: 460px;
+
+}
+
+#cityName {
+    font-size: 2em;
+}
+
+img {
+    width: 80px;
+    height:80px;
 }

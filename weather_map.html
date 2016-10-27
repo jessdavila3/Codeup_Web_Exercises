@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Maps App</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/weather_map_style.css">
 </head>
@@ -56,7 +56,7 @@
     function fillData(data) {
         $("#cityName").html(data.city.name);
         $("#boxFirst").html(
-                "<span>" + data.list[0].temp.max + "&#176;/" + data.list[0].temp.min + "&#176" + "</span><br>"
+                "<span>" + data.list[0].temp.max.toFixed(0) + "&#176;/" + data.list[0].temp.min.toFixed(0) + "&#176" + "</span><br>"
                 + "<img src=http://openweathermap.org/img/w/"+data.list[0].weather[0].icon+".png><br>"
                 + "<strong>Clouds:</strong> " + data.list[0].weather[0].description + "<br>"
                 + "<strong>Humidity:</strong> " + data.list[0].humidity + "<br>"
@@ -64,7 +64,7 @@
                 + "<strong>Pressure:</strong> " + data.list[0].pressure
         );
         $("#boxSecond").html(
-                "<span>" + data.list[1].temp.max + "&#176;/" + data.list[1].temp.min + "&#176" + "</span><br>"
+                "<span>" + data.list[1].temp.max.toFixed(0) + "&#176;/" + data.list[1].temp.min.toFixed(0) + "&#176" + "</span><br>"
                 + "<img src=http://openweathermap.org/img/w/"+data.list[1].weather[0].icon+".png><br>"
                 + "<strong>Clouds:</strong> " + data.list[1].weather[0].description + "<br>"
                 + "<strong>Humidity:</strong> " + data.list[1].humidity + "<br>"
@@ -72,7 +72,7 @@
                 + "<strong>Pressure:</strong> " + data.list[1].pressure
         );
         $("#boxThird").html(
-                "<span>" + data.list[2].temp.max + "&#176;/" + data.list[2].temp.min + "&#176" + "</span><br>"
+                "<span>" + data.list[2].temp.max.toFixed(0) + "&#176;/" + data.list[2].temp.min.toFixed(0) + "&#176" + "</span><br>"
                 + "<img src=http://openweathermap.org/img/w/"+data.list[2].weather[0].icon+".png><br>"
                 + "<strong>Clouds:</strong> " + data.list[2].weather[0].description + "<br>"
                 + "<strong>Humidity:</strong> " + data.list[2].humidity + "<br>"
