@@ -42,18 +42,29 @@
             lat: myMarker.getPosition().lat(),
             lon: myMarker.getPosition().lng()
         }).always(function(data) {
-            console.log(data);
             fillData(data);
         }).fail(function (error) {
             console.log(error);
         }).done(function (data) {
-            console.log(data);
         });
     }
     refreshMap();
-
-
     function fillData(data) {
+        $("#cityName").html(data.city.name);
+        $(".col-sm-4").each(function(index,element) {
+            $(this).html(
+                    "<span>" + data.list[index].temp.max.toFixed(index) + "&#176;/" + data.list[index].temp.min.toFixed() + "&#176" + "</span><br>"
+                    + "<img src=http://openweathermap.org/img/w/"+data.list[index].weather[0].icon+".png><br>"
+                    + "<strong>Clouds:</strong> " + data.list[index].weather[0].description + "<br>"
+                    + "<strong>Humidity:</strong> " + data.list[index].humidity + "<br>"
+                    + "<strong>Wind:</strong> " + data.list[index].speed + "<br>"
+                    + "<strong>Pressure:</strong> " + data.list[index].pressure
+            );
+            console.log(element);
+        });
+    }
+
+    /*function fillData(data) {
         $("#cityName").html(data.city.name);
         $("#boxFirst").html(
                 "<span>" + data.list[0].temp.max.toFixed(0) + "&#176;/" + data.list[0].temp.min.toFixed(0) + "&#176" + "</span><br>"
@@ -80,7 +91,7 @@
                 + "<strong>Pressure:</strong> " + data.list[2].pressure
         );
 
-    }
+    }*/
 
     google.maps.event.addListener(myMarker, 'dragend', function() {
         map.setCenter(myMarker.position);
