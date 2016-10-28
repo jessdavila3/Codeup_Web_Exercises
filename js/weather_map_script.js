@@ -61,9 +61,7 @@ function showPosition(position) {
             lng: position.coords.longitude
         }
     });
-    currentPosition.setMap(map);
-    map.setCenter(currentPosition.position);
-    refreshMap(position);
+    refreshMap();
 }
 
 function getLocation() {
