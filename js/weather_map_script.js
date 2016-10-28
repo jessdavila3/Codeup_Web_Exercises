@@ -35,7 +35,7 @@ function fillData(data) {
     $("#cityName").html(data.city.name);
     $(".col-sm-4").each(function(index) {
         $(this).html(
-            "<span>" + data.list[index].temp.max.toFixed(0) + "&#176;/" + data.list[index].temp.min.toFixed(0) + "&#176" + "</span><br>"
+            "<span class='temps'>" + data.list[index].temp.max.toFixed(0) + "&#176;/" + data.list[index].temp.min.toFixed(0) + "&#176" + "</span><br>"
             + "<img src=http://openweathermap.org/img/w/"+data.list[index].weather[0].icon+".png><br>"
             + "<strong>Clouds:</strong> " + data.list[index].weather[0].description + "<br>"
             + "<strong>Humidity:</strong> " + data.list[index].humidity + "<br>"
@@ -49,3 +49,30 @@ google.maps.event.addListener(myMarker, 'dragend', function() {
     map.setCenter(myMarker.position);
     refreshMap();
 });
+
+$(".col-sm-4").click(function() {
+    window.open("https://youtu.be/7QLSRMoKKS0");
+});
+
+function showPosition(position) {
+    var currentPosition = new google.maps.Marker({
+        position: {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        }
+    });
+    currentPosition.setMap(map);
+}
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+        console.log('it worked');
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+        console.log('nope');
+    }
+}
+$("#findMe").click(getLocation());
+
+

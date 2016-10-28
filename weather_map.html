@@ -5,19 +5,23 @@
     <title>Maps App</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/weather_map_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
 </head>
 <body>
 <main class="container">
-    <h1>Weather Application</h1>
-    <div class="weather-display">
+    <h1>Weather App</h1>
+    <div class="weather-display jumbotron">
         <h2 id="cityName" class="text-center"></h2>
         <div class="row">
-            <div class="col-sm-4 box" id="boxFirst"></div>
-            <div class="col-sm-4 box" id="boxSecond"></div>
-            <div class="col-sm-4 box-last" id="boxThird"></div>
+            <div class="col-sm-4 box text-center" id="boxFirst"></div>
+            <div class="col-sm-4 box text-center" id="boxSecond"></div>
+            <div class="col-sm-4 text-center" id="boxThird"></div>
         </div>
     </div>
     <div id="map-canvas"></div>
+    <div>
+        <button id="findMe">wtf am i</button>
+    </div>
 
 </main>
 <script src="js/jquery-3.1.1.min.js"></script>

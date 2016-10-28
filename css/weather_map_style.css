@@ -1,31 +1,22 @@
 body {
     background-image: url("../img/weather.png");
     font-size: 1.5em;
+    font-family: 'Roboto Slab', serif;
 }
 
 .weather-display {
     background-color: lightgray;
     border: solid 1px black;
-    margin-bottom: 3%;
+    box-shadow: 10px 10px 5px #888888;
+    opacity:.9;
 }
 
 .box {
     border-right: solid 1px black;
-    text-align: center;
-    margin-bottom: 1%;
 }
 
-.box-last {
-    text-align: center;
-    margin-bottom: 1%;
-}
 
-.box>span {
-    font-size: 2em;
-    font-weight: bold;
-}
-
-.box-last>span {
+span.temps {
     font-size: 2em;
     font-weight: bold;
 }
@@ -39,9 +30,15 @@ body {
 
 #cityName {
     font-size: 3em;
+    letter-spacing: 4px;
 }
 
 img {
-    width: 60px;
-    height:60px;
+    width: 55px;
+    height:55px;
+}
+
+strong {
+    font-weight: bold;
+    font-size: 1.25em;
 }
