@@ -8,7 +8,8 @@ var myMarker = new google.maps.Marker({
     draggable: true
 });
 var mapOptions = {
-    zoom: 12
+    zoom: 12,
+    scrollwheel: false
 };
 var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 map.setCenter(myMarker.position);
@@ -21,10 +22,11 @@ function refreshMap() {
         lat: myMarker.getPosition().lat(),
         lon: myMarker.getPosition().lng()
     }).always(function(data) {
-        fillData(data);
     }).fail(function (error) {
         console.log(error);
     }).done(function (data) {
+        fillData(data);
+        console.log(data);
     });
 }
 refreshMap();
