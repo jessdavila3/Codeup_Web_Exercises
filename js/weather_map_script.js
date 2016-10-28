@@ -62,6 +62,8 @@ function showPosition(position) {
         }
     });
     currentPosition.setMap(map);
+    map.setCenter(currentPosition.position);
+    refreshMap(position);
 }
 
 function getLocation() {
@@ -69,10 +71,13 @@ function getLocation() {
         navigator.geolocation.getCurrentPosition(showPosition);
         console.log('it worked');
     } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
         console.log('nope');
     }
 }
-$("#findMe").click(getLocation());
+
+$("#findMe").click(function() {
+    getLocation();
+});
+
 
 
