@@ -17,11 +17,6 @@ body, html {
     background-image: url("../img/concrete_wall.png");
 }
 
-.site-wrapper {
-    width: 100%;
-
-}
-
 .site-wrapper-inner {
     padding:2%;
 }
