@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Work</title>
+</head>
+<body>
+<h1>Array Work</h1>
+<script>
+    var letters = ['e', 'a', 'g', 'c', 'i', 'd', 'f', 'b', 'h'],
+            orderLetters = [];
+
+
+    do {
+        var min = letters[0],
+                minIndex = 0;
+        letters.forEach(function (letter, i) {
+            if (min > letter) {
+                min = letter;
+                minIndex = i;
+            }
+        });
+        letters.splice(minIndex, 1);
+        orderLetters.push(min);
+    } while (letters.length > 0);
+
+    console.log(orderLetters);
+</script>
+</body>
+</html>
