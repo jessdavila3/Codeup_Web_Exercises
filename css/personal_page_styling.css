@@ -9,6 +9,10 @@ body {
     color: white;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .navbar {
     font-size: 2em;
     background-color: lightseagreen;
@@ -34,6 +38,10 @@ h1.banner-name {
     font-size: 3.5em;
     position: relative;
     top:35%;
+}
+
+h1.banner-name>small {
+    color: whitesmoke;
 }
 
 .btm-info-field {
