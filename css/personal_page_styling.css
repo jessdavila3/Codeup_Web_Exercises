@@ -85,7 +85,9 @@ h1.banner-name>small {
 }
 
 .bg-3 {
+    padding-top: 5%;
     height:500px;
+    background-color: orangered;
 }
 
 .personal-story {
