@@ -76,6 +76,25 @@ h1.banner-name>small {
     padding-bottom: 5%;
 }
 
-.bg-1, .bg-2 {
-    height: 320px;
+.bg-1{
+    height: 200px;
+}
+
+.bg-2 {
+    height:220px;
+}
+
+.bg-3 {
+    height:500px;
+}
+
+.personal-story {
+    font-size: 1.2em;
+    text-align: justify;
+    margin-top: 2%;
+}
+
+.contact-info {
+    font-size: 1.6em;
+    text-align: left;
 }

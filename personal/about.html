@@ -23,7 +23,7 @@
                 <h1>What about me?</h1>
             </div>
             <div class="col-lg-9">
-                <p>
+                <p class="personal-story">
                     I am a current student at Codeup in San Antonio, Texas. I enjoy the process of solving problems.
                     I like to cook and make music and create things that other people can enjoy and judge me on.
                 </p>
@@ -34,10 +34,10 @@
                 <h1>If you would like to contact me...</h1>
             </div>
             <div class="col-lg-4">
-                <p>
-                    Email: jessedavila3@gmail.com <br>
-                    Phone: 830-660-8842 <br>
-                    Skype: ---
+                <p class="contact-info">
+                    <strong>Email:</strong> jessedavila3@gmail.com <br>
+                    <strong>Phone:</strong> 830-660-8842 <br>
+                    <strong>Skype:</strong> ---
                 </p>
             </div>
         </div>
@@ -45,11 +45,25 @@
             <div class="col-lg-2">
                 <h1>Or just...</h1>
             </div>
-            <div class="col-lg-10">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-6">
                 <form>
-                    Email: jessedavila3@gmail.com <br>
-                    Phone: 830-660-8842 <br>
-                    Skype: ---
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label form="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone #</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label form="message">Message</label>
+                        <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                    </div>
                 </form>
             </div>
         </div>
@@ -61,7 +75,7 @@
             <p class="aboutMeInfo text-center">I code, I cook, I make music</p>
         </div>
         <div class="col-md-6">
-            <h2 class="text-center">Contact Me</h2>
+            <h2 class="text-center">Find Me</h2>
             <ul class="socialMediaButtonSet">
                 <li class="list-group-items">
                     <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
