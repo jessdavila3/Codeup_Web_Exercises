@@ -40,6 +40,14 @@ ul li {
     top:18px;
 }
 
+.btm-info-field {
+    height:250px;
+    background-color: #18bbd0;
+    font-size: 1.2em;
+}
+
+
+/*home page*/
 .banner-bg {
     width: 100%;
     height: 600px;
@@ -57,12 +65,8 @@ h1.banner-name>small {
     color: whitesmoke;
 }
 
-.btm-info-field {
-    height:250px;
-    background-color: #18bbd0;
-    font-size: 1.2em;
-}
 
+/*work page*/
 .myWorkEntry {
     font-size: 1.5em;
     padding: 3%;
@@ -92,6 +96,8 @@ h1.banner-name>small {
     border-top: solid 1px lightgray;
 }
 
+
+/*about page*/
 .bg-1{
     height: 350px;
     padding-top: 5%;
