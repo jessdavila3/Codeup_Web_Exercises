@@ -28,7 +28,7 @@ ul li {
 
 .navbar {
     font-size: 2em;
-    background-color: lightseagreen;
+    background-color: #18bbd0;
     height: 3em;
     width: 100%;
 }
@@ -59,7 +59,7 @@ h1.banner-name>small {
 
 .btm-info-field {
     height:250px;
-    background-color: lightseagreen;
+    background-color: #18bbd0;
     font-size: 1.2em;
 }
 
@@ -87,7 +87,7 @@ h1.banner-name>small {
 .bg-3 {
     padding-top: 5%;
     height:500px;
-    background-color: orangered;
+    background-color: #ff9800;
 }
 
 .personal-story {
