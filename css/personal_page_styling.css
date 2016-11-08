@@ -78,10 +78,13 @@ h1.banner-name>small {
 
 .bg-1{
     height: 350px;
+    padding-top: 5%;
 }
 
 .bg-2 {
     height:220px;
+    border-top: 1px solid lightgray;
+    padding-top: 5%;
 }
 
 .bg-3 {
