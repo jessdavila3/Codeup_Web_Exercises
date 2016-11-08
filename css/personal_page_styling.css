@@ -76,6 +76,22 @@ h1.banner-name>small {
     padding-bottom: 5%;
 }
 
+.calculator-content {
+    height: 550px;
+}
+
+.weather-content {
+    height: 750px;
+    padding-top: 8%;
+    border-top: solid 1px lightgray;
+}
+
+.simon-content {
+    height: 60px;
+    padding-top: 8%;
+    border-top: solid 1px lightgray;
+}
+
 .bg-1{
     height: 350px;
     padding-top: 5%;
