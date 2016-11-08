@@ -77,7 +77,7 @@ h1.banner-name>small {
 }
 
 .bg-1{
-    height: 200px;
+    height: 350px;
 }
 
 .bg-2 {
@@ -91,7 +91,7 @@ h1.banner-name>small {
 }
 
 .personal-story {
-    font-size: 1.2em;
+    font-size: 1.4em;
     text-align: justify;
     margin-top: 2%;
 }
