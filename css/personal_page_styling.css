@@ -44,6 +44,7 @@ ul li {
     height:250px;
     background-color: #18bbd0;
     font-size: 1.2em;
+    padding-top: 2%;
 }
 
 
@@ -124,4 +125,9 @@ h1.banner-name>small {
 .contact-info {
     font-size: 1.6em;
     text-align: left;
+}
+
+#about-skills-list {
+    font-size: 1.5em;
+    padding-top: 3%;
 }
