@@ -42,55 +42,55 @@ ul li {
 }
 
 .btm-info-field {
-    height: 100%;
+    height: 275px;
     background-color: #18bbd0;
     font-size: 1.2em;
 }
 
 
 /*home page*/
-.banner-bg {
+#banner-bg {
     width: 100%;
     height: 600px;
     margin-top: 0;
     padding-top: 0;
 }
 
-h1.banner-name {
+h1#banner-name {
     font-size: 3.5em;
     position: relative;
     top:35%;
 }
 
-h1.banner-name>small {
+h1#banner-name>small {
     color: whitesmoke;
 }
 
 
 /*work page*/
-.myWorkEntry {
+#myWorkEntry {
     font-size: 1.5em;
     padding: 3%;
 }
 
-.myWorkEntry p {
+#myWorkEntry p {
     margin-left: 5%;
 }
 
-.calculator-content {
+#calculator-content {
     height: 100%;
     padding-top: 2%;
     padding-bottom: 2%;
 }
 
-.weather-content {
+#weather-content {
     height: 100%;
     padding-top: 2%;
     padding-bottom: 2%;
     border-top: solid 1px lightgray;
 }
 
-.simon-content {
+#simon-content {
     height: 100%;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -112,8 +112,8 @@ h1.banner-name>small {
 }
 
 .bg-3 {
-    padding-top: 5%;
-    height:500px;
+    padding: 5%;
+    height:100%;
     background-color: #ff9800;
 }
 
