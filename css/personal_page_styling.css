@@ -34,24 +34,20 @@ ul li {
 .navbar {
     font-size: 2em;
     background-color: #00A1B2;
-    height: 3em;
+    height: 80px;
     width: 100%;
 }
 
 .nav-pills {
-    padding:3%;
     color: white;
-    position: relative;
-    top:18px;
 }
 
 .btm-info-field {
     height: 275px;
     background-color: #00A1B2;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-family: 'Rasa', serif;
 }
-
 
 /*home page*/
 #banner-bg {
@@ -103,15 +99,16 @@ h1#banner-name>small {
 
 /*about page*/
 .bg-1{
-    height: 350px;
-    padding-top: 5%;
+    height: auto;
+    padding-top: 3%;
+    padding-bottom: 5%;
 }
 
 .bg-2 {
     height:220px;
     border-top: 1px solid lightgray;
     padding-top: 5%;
-    padding-bottom: 2%;
+    padding-bottom: 5%;
 }
 
 .bg-3 {
@@ -120,14 +117,14 @@ h1#banner-name>small {
     background-color: #FF6C00;
 }
 
-.personal-story {
+#personal-story {
     font-size: 1.5em;
     text-align: justify;
     margin-top: 2%;
 }
 
 .contact-info {
-    font-size: 1.8em;
+    font-size: 1.7em;
     text-align: left;
 }
 
@@ -142,4 +139,8 @@ h1#banner-name>small {
 
 #about-content p {
     font-family: 'Open Sans', sans-serif;
+}
+
+#aboutMessage {
+    font-size: 2em;
 }

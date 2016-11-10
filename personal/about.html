@@ -6,14 +6,23 @@
     <script src="https://use.fontawesome.com/51193808e4.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/personal_page_styling.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Rasa|Roboto" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Rasa|Roboto" rel="stylesheet">
+</head>
 <body>
 <main>
-    <nav class="nav navbar">
+    <nav class="navbar" role="navigation">
         <div class="col-sm-6 pull-right">
-            <a class="nav-pills" href="home.html">home</a>
-            <a class="nav-pills" href="my_work.html">work</a>
-            <a class="nav-pills" href="about.html">about</a>
+            <ul class="nav nav-pills">
+                <li>
+                    <a href="home.html">home</a>
+                </li>
+                <li>
+                    <a href="my_work.html">work</a>
+                </li>
+                <li>
+                    <a href="about.html">about</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
@@ -23,12 +32,12 @@
                 <h1 class="about-question">Who am I?</h1>
             </div>
             <div class="col-lg-8">
-                <p class="personal-story">
+                <p id="personal-story">
                     I am currently a student at Codeup in San Antonio, Texas.<br>
-                    Learning to code because I enjoy the challenge of solving problems and because
-                    I enjoy making other people's lives a little easier through my work. <br>
-                    I've also been known to enjoy cooking and tossing things in hot pans, making music and singing loudly, and creating things that other people can
-                    enjoy and judge me on.
+                    I am learning to code because I enjoy the challenge of solving problems and because
+                    I enjoy making other people's lives a little easier or a little better through my work. <br>
+                    I've also been known to enjoy cooking by tossing things in hot pans, making music and singing
+                    loudly, and creating things that other people can enjoy.
                 </p>
             </div>
         </div>
@@ -82,25 +91,33 @@
                     <button id="formSubmit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
+            <div class="col-lg-2">
+                <p id="aboutMessage">
+
+                </p>
+            </div>
         </div>
     </div>
 
     <nav class="btm-info-field">
         <div class="col-md-6">
             <h2 class="text-center">About Me</h2>
-            <p class="aboutMeInfo text-center">I code, I cook, I make music</p>
+            <p class="about-me-info text-center">I code, I cook, I make music</p>
         </div>
         <div class="col-md-6">
             <h2 class="text-center">Find Me</h2>
             <ul class="socialMediaButtonSet text-center">
                 <li class="list-group-items">
-                    <a href="https://www.instagram.com/jessdavila3/"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+                    <a href="https://www.instagram.com/jessdavila3/"><i class="fa fa-instagram" aria-hidden="true"></i>
+                        Instagram</a>
                 </li>
                 <li class="list-group-items">
-                    <a href="http://twitter.com/jessedavila"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+                    <a href="http://twitter.com/jessedavila"><i class="fa fa-twitter" aria-hidden="true"></i>
+                        Twitter</a>
                 </li>
                 <li class="list-group-items">
-                    <a href="https://github.com/jessdavila3"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+                    <a href="https://github.com/jessdavila3"><i class="fa fa-github" aria-hidden="true"></i>
+                        GitHub</a>
                 </li>
             </ul>
         </div>
@@ -109,8 +126,22 @@
 <script src="../js/jquery-3.1.1.min.js"></script>
 <script src="../js/bootstrap.js"></script>
 <script>
-    $("#formSubmit").click(function() {
-        alert('hey');
+
+    var c = 0;
+
+    $("#formSubmit").click(function () {
+        $("#aboutMessage").html("Hey, thanks!");
+    });
+
+    $("#personal-story").click(function () {
+        if (c == 0) {
+            $(this).append(" I also enjoy forcing friends and family to check out my work even when they have no desire to.");
+        } else if (c == 1) {
+            $(this).append(" But it's okay, they are really supportive.");
+        } else if (c == 2) {
+            $(this).html("I love everything about coding. I enjoy the finding an approach to solve a problem and then figuring out a better one, I enjoy having an idea in your head and making it something everything else can see and experience.");
+        }
+        c++;
     })
 </script>
 </body>
