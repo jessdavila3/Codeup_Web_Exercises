@@ -6,7 +6,7 @@
     <script src="https://use.fontawesome.com/51193808e4.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/personal_page_styling.css">
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Rasa|Roboto" rel="stylesheet"></head>
 <body>
 <main>
     <nav class="nav navbar">
@@ -20,7 +20,7 @@
     <div id="about-content" class="container">
         <div class="bg-1 row">
             <div class="col-lg-3">
-                <h1>Who am I?</h1>
+                <h1 class="about-question">Who am I?</h1>
             </div>
             <div class="col-lg-8">
                 <p class="personal-story">
@@ -34,7 +34,7 @@
         </div>
         <div class="bg-2 row">
             <div class="col-lg-3">
-                <h1>What am I learning?</h1>
+                <h1 class="about-question">What am I learning?</h1>
             </div>
             <div class="col-lg-8">
                 <p id="about-skills-list">
@@ -44,7 +44,7 @@
         </div>
         <div class="bg-2 row">
             <div class="col-lg-8">
-                <h1>And here's my contact info...</h1>
+                <h1 class="about-question">And here's my contact info...</h1>
             </div>
             <div class="col-lg-4">
                 <p class="contact-info">
@@ -58,7 +58,7 @@
     <div class="bg-3">
         <div class="container">
             <div class="col-lg-2">
-                <h1>If you would like to contact me...</h1>
+                <h1 class="about-question">If you would like to contact me...</h1>
             </div>
             <div class="col-lg-1"></div>
             <div class="col-lg-6">
@@ -79,7 +79,7 @@
                         <label form="message">Message</label>
                         <textarea class="form-control" rows="3" placeholder="Message"></textarea>
                     </div>
-                    <button class="btn btn-primary">Submit</button>
+                    <button id="formSubmit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
@@ -108,5 +108,10 @@
 </main>
 <script src="../js/jquery-3.1.1.min.js"></script>
 <script src="../js/bootstrap.js"></script>
+<script>
+    $("#formSubmit").click(function() {
+        alert('hey');
+    })
+</script>
 </body>
 </html>
